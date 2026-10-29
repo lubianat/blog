@@ -5,11 +5,11 @@ const path = require("path");
 const { build, OUT_DIR } = require("./build");
 
 const PORT = process.env.PORT || 3000;
-const TYPES = { ".html": "text/html; charset=utf-8", ".xml": "application/rss+xml", ".png": "image/png", ".jpg": "image/jpeg", ".svg": "image/svg+xml", ".gif": "image/gif", ".webp": "image/webp" };
+const TYPES = { ".html": "text/html; charset=utf-8", ".xml": "application/rss+xml", ".png": "image/png", ".jpg": "image/jpeg", ".svg": "image/svg+xml", ".gif": "image/gif", ".webp": "image/webp", ".pdf": "application/pdf" };
 
 build();
 let timer;
-fs.watch(path.join(__dirname, "posts"), () => {
+fs.watch(path.join(__dirname, "posts"), { recursive: true }, () => {
   clearTimeout(timer);
   timer = setTimeout(build, 100);
 });
