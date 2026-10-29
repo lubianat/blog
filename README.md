@@ -1,4 +1,4 @@
-# tiago-ai
+# blog
 
 A super lightweight blog — drop `.md` files in `posts/` and they appear.
 

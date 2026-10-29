@@ -1,5 +1,5 @@
 {
-  "name": "tiago-ai",
+  "name": "blog",
   "version": "1.0.0",
   "description": "A super lightweight blog — drop .md files in posts/ and they appear.",
   "main": "server.js",
