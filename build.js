@@ -8,7 +8,7 @@ const { marked } = require("marked");
 
 const POSTS_DIR = path.join(__dirname, "posts");
 const OUT_DIR = path.join(__dirname, "_site");
-const SITE_URL = "https://tiago.bio.br/tiago-ai/";
+const SITE_URL = "https://tiago.bio.br/blog/";
 const SITE_TITLE = "Tiago Lubiana";
 const SITE_DESC = "Writing by a dev/RSE interested in bioimaging, wiki, linked data, iNaturalist and plants — plus useful AI conversations.";
 // Each subfolder of posts/ is a section.
