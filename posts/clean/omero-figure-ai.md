@@ -6,11 +6,15 @@ tags: omero, ome-zarr, ai, microscopy
 
 # Drawing the OME logo in OME Figure with Claude
 
+
+
+Josh Moore asked me to see if I could make the OME logo in OMERO.figure. Here it is:
+
 <img src="../omero-figure-ai-files/images/ome_figure.png" alt="The OME logo made of nuclei in OMERO.figure" width="360">
 
-Josh Moore asked me to see if I could make the OME logo in OMERO.figure.
+[Open this figure in OME Figure](https://ome.github.io/figure?file=https://gist.githubusercontent.com/lubianat/93b763ef6844c3e9d7bb822583310e42/raw/80c8e232b3e5cc92b6271d56d4c5bf59dcceb899/figure.json)
 
-It was a fun idea, specially because I wanted to test a thing: to see if Claude would do well in handling OME-figure.
+It was a fun idea, specially because I wanted to test a thing: if Claude would do well in handling OME-figure.
 
 And it worked! That worked because an OMERO.figure metadata is just a JSON file, and the images are public OME-Zarr files from the IDR.
 The code is also open-source and relatively small, so the system could crawl and understand the full code base ([here is the full chat](https://claude.ai/share/8cfbe239-0e0b-406c-8ddd-f210c2514833)).
@@ -35,7 +39,7 @@ Then I got the system to turn off the borders and used a white background with i
 
 <img src="../omero-figure-ai-files/images/ome_figure.png" alt="The OME logo made of nuclei in OMERO.figure" width="360">
 
-[Open this figure in OMERO.figure](https://ome.github.io/figure?file=https://gist.githubusercontent.com/lubianat/93b763ef6844c3e9d7bb822583310e42/raw/80c8e232b3e5cc92b6271d56d4c5bf59dcceb899/figure.json)
+[Open this figure in OME Figure](https://ome.github.io/figure?file=https://gist.githubusercontent.com/lubianat/93b763ef6844c3e9d7bb822583310e42/raw/80c8e232b3e5cc92b6271d56d4c5bf59dcceb899/figure.json)
 
 Then GerBI. 92 panels is too many to write by hand, so I asked for a [Python script that writes the JSON](https://github.com/lubianat/logo-gerbi-ome-figure). It took the dot positions from a screenshot of the logo, and lined up the grey dots on their grid.
 
