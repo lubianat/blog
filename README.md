@@ -10,8 +10,10 @@ npm start
 # → http://localhost:3000
 ```
 
-To add a post: paste any `.md` file into `posts/` and it will show up on the index.
+To add a post: drop a `.md` file into `posts/`. Title = its first `# heading`; date = the file's first git commit. Images etc. in `posts/` are copied too (reference as `../name.png`). `npm start` rebuilds on save.
+
+`npm run build` writes `_site/` (index, posts, `feed.xml`, `404.html`); GitHub Actions deploys it to Pages on push to `main`.
 
 ## Stack
 
-Single-file Node.js server (`server.js`) + [`marked`](https://marked.js.org/) for markdown rendering. No framework, no build step, no database. 
+`build.js` (static generator) + [`marked`](https://marked.js.org/). `server.js` is just a local preview of the built output. No framework, no database. 
