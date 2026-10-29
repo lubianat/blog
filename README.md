@@ -13,7 +13,7 @@ npm start
 Posts live in three sections:
 
 - `posts/handmade/` → `/handmade/`: fully human-crafted texts
-- `posts/blog/` → `/blog/`: curated posts that may be AI-supported
+- `posts/clean/` → `/clean/`: curated posts that may be AI-supported
 - `posts/dumps/` → `/dumps/`: raw, unedited AI conversations, kept because they cost time and tokens and don't need to be private
 
 Each post is served at `/<filename>/` whatever its section, so moving a post between sections keeps its URL. Use kebab-case filenames. Optional front matter:

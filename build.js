@@ -14,7 +14,7 @@ const SITE_DESC = "Writing by a dev/RSE interested in bioimaging, wiki, linked d
 // Each subfolder of posts/ is a section.
 // URLs: /<slug>/ for posts, /<section>/ for section lists, /tag/<tag>/ for tags.
 const SECTIONS = {
-  blog: { name: "Blog", desc: "Posts that may be AI-supported, but are curated and edited by me." },
+  clean: { name: "Blog", desc: "Posts that may be AI-supported, but are curated and edited by me." },
   handmade: { name: "Handmade", desc: "Fully human-crafted texts, no AI involved." },
   dumps: { name: "AI dumps", desc: "Raw, unedited AI conversations, shared because they cost time and tokens and don't need to be private.", notice: "Raw AI conversation, unedited. Likely contains mistakes." },
 };
@@ -30,8 +30,8 @@ const REDIRECTS = {
 const RESERVED = new Set([...Object.keys(SECTIONS), "tag", "post", "feed.xml", "404.html", "index.html"]);
 
 const CSS = `
-  :root { color-scheme: light dark; --fg: #222; --bg: #fdfcfa; --muted: #6b6b6b; --link: #0b5cad; --code: #f2f1ee; --rule: #e2e0dc; --handmade: #2f7d4f; --blog: #0b5cad; --dumps: #a0522d; }
-  @media (prefers-color-scheme: dark) { :root { --fg: #ddd; --bg: #161616; --muted: #999; --link: #6ab0ff; --code: #242424; --rule: #333; --handmade: #6cc48f; --blog: #6ab0ff; --dumps: #e0a070; } }
+  :root { color-scheme: light dark; --fg: #222; --bg: #fdfcfa; --muted: #6b6b6b; --link: #0b5cad; --code: #f2f1ee; --rule: #e2e0dc; --handmade: #2f7d4f; --clean: #0b5cad; --dumps: #a0522d; }
+  @media (prefers-color-scheme: dark) { :root { --fg: #ddd; --bg: #161616; --muted: #999; --link: #6ab0ff; --code: #242424; --rule: #333; --handmade: #6cc48f; --clean: #6ab0ff; --dumps: #e0a070; } }
   * { box-sizing: border-box; }
   body { font-family: Georgia, serif; max-width: 720px; margin: 0 auto; padding: 0 16px 48px; color: var(--fg); background: var(--bg); line-height: 1.7; overflow-wrap: break-word; }
   a { color: var(--link); text-decoration: none; }
@@ -51,7 +51,7 @@ const CSS = `
   blockquote { border-left: 4px solid var(--rule); margin: 0; padding-left: 16px; color: var(--muted); }
   .meta, .date { color: var(--muted); font-size: 0.9em; font-family: system-ui, sans-serif; }
   .badge { font: 600 0.72em system-ui, sans-serif; text-transform: uppercase; letter-spacing: .05em; padding: 1px 6px; border-radius: 3px; border: 1px solid currentColor; }
-  .badge.handmade { color: var(--handmade); } .badge.blog { color: var(--blog); } .badge.dumps { color: var(--dumps); }
+  .badge.handmade { color: var(--handmade); } .badge.clean { color: var(--clean); } .badge.dumps { color: var(--dumps); }
   .tags a { margin-right: 8px; }
   ul.posts { list-style: none; padding: 0; }
   ul.posts li { padding: 10px 0; border-bottom: 1px solid var(--rule); }
